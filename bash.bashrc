@@ -1,9 +1,9 @@
 #######################################
 #                                     #
 # Termux bash.bashrc                  #
-# Modified by: KNIGHTFALL             #
+# Modified by: gr8skills              #
 #                                     #
-# Last modified: 2023/09/18           #
+# Last modified: 2025/02/20           #
 #                                     #
 #######################################
 
@@ -70,6 +70,7 @@ dir_cr="36" #color of current directory
 
 PS1='\[\033[0;${bar_cr}m\]┌──(\[\033[1;${name_cr}m\]${user_name}${sym}\h\[\033[0;${bar_cr}m\])-[\[\033[0;${dir_cr}m\]\w\[\033[0;${bar_cr}m\]]
 \[\033[0;${bar_cr}m\]└─\[\033[1;${end_cr}m\]\$\[\033[0m\] '
+# PS1=" \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 #### Aliases ##########################
 
@@ -106,6 +107,7 @@ alias c='clear'
 alias count='find . -type f | wc -l'
 alias fbig="find . -size +128M -type f -printf '%s %p\n'| sort -nr | head -16"
 alias randir='mkdir -p ./$(cat /dev/urandom | tr -cd 'a-z' | head -c 4)/$(cat /dev/urandom | tr -cd 'a-z' | head -c 4)/'
+alias myip2='curl ipinfo.io/ip'
 
 # memory/CPU
 alias df='df -Tha --total'
